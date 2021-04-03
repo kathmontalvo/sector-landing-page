@@ -30,7 +30,7 @@ nav ul li a {
 }
 
 .banner-bg {
-    background-image: url("/images/main-background.png");
+    background-image: url("images/main-background.png");
     background-size: cover;
     position: absolute;
     top: 0;
