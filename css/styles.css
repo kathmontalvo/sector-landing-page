@@ -19,10 +19,6 @@ body {
 
 /* General */
 
-header, footer {
-    /* padding: 56px 80px; */
-}
-
 nav ul {
     margin: 0;
 }
@@ -96,10 +92,6 @@ main aside.float-nav nav ul li a {
     font-weight: 700;
 }
 
-main section {
-    /* padding: 56px 130px; */
-}
-
 main section.main-banner {
     display: flex;
     justify-content: space-between;
@@ -141,7 +133,6 @@ main section.content {
 
 main section.content .text {
     width: 100%;
-    /* padding: 0 80px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
