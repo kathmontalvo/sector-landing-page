@@ -80,6 +80,7 @@ header nav ul li a {
 /* Main banner */
 
 main aside.float-nav {
+    display: none;
     position: absolute;
     right: 80px;
     top: 200px;
@@ -108,7 +109,7 @@ main section.main-banner .rrss {
     position: absolute;
     left: 80px;
     top: 200px;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 10px 0;
 }
@@ -135,11 +136,11 @@ main section.content {
     color: var(--light);
     display: flex;
     flex-direction: var(--direction);
-    max-height: 600px;
+    padding: 40px;
 }
 
 main section.content .text {
-    width: 80%;
+    width: 100%;
     /* padding: 0 80px; */
     display: flex;
     flex-direction: column;
@@ -147,14 +148,14 @@ main section.content .text {
 }
 
 main section.content .text h2 {
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
     font-weight: 600;
     text-transform: uppercase;
     margin: 24px 0;
 }
 
 main section.content .text p {
-    font-size: var(--font-sm);
+    font-size: var(--font-xsm);
     font-weight: 400;
     margin: 24px 0;
 }
@@ -164,15 +165,12 @@ main section.content .text a {
     font-size: var(--font-sm);
     font-weight: 700;
     text-decoration: none;
+    margin-bottom: 24px;
 }
 
 main section.content img {
     object-fit: contain;
     object-position: right;
-}
-
-main section.content:nth-child(2n) img {
-    object-position: left;
 }
 
 main section.gradient {
@@ -189,6 +187,17 @@ footer {
     display: flex;
     flex-direction: var(--direction);
     justify-content: space-between;
+}
+
+footer .column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .column h3 {
+    align-self: flex-start;
 }
 
 footer .column-group {
@@ -239,6 +248,13 @@ footer .column-group .column nav ul li {
     footer {
         padding: 56px 220px;
     }
+    
+    main aside.float-nav {
+        display: block;
+    }
+    main section.main-banner .rrss {
+        display: flex;
+    }
 
     main section {
         padding: 56px 130px;
@@ -248,6 +264,28 @@ footer .column-group .column nav ul li {
         font-size: var(--font-xl);
         line-height: 100px;
     }
+    main section.content .text h2 {
+        font-size: var(--font-lg);
+    }
+    main section.content {
+        max-height: 600px;
+        padding: 56px 130px;
+    }
+    main section.content .text {
+        width: 80%;
+    }    
+    main section.content .text p {
+        font-size: var(--font-sm);
+    }
+    main section.content:nth-child(2n) img {
+        object-position: left;
+        order: 1;
+    }
+    main section.content:nth-child(2n) .text {
+        object-position: left;
+        order: 2;
+    }
+    
 }
 
 @media screen and (min-width: 1600px) {
